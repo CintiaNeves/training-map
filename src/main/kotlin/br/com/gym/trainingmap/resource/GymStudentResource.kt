@@ -2,6 +2,7 @@ package br.com.gym.trainingmap.resource
 
 import br.com.gym.trainingmap.domain.entity.GymStudent
 import br.com.gym.trainingmap.domain.request.GymStudentRequest
+import br.com.gym.trainingmap.domain.response.GymStudentResponse
 import br.com.gym.trainingmap.service.GymStudentService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
@@ -18,12 +19,12 @@ class GymStudentResource {
     lateinit var service: GymStudentService
 
     @PostMapping("/gym-student")
-    fun create(@Valid @RequestBody request: GymStudentRequest): ResponseEntity<GymStudent> {
-        var gymStudent = service.create(request)
-        var uri = ServletUriComponentsBuilder.fromCurrentRequestUri()
+    fun create(@Valid @RequestBody request: GymStudentRequest): ResponseEntity<GymStudentResponse> {
+        val gymStudent = service.create(request)
+        val uri = ServletUriComponentsBuilder.fromCurrentRequestUri()
                 .path("/{id}")
                 .buildAndExpand(gymStudent.id).toUri()
-        return ResponseEntity.created(uri).body(gymStudent)
+        return ResponseEntity.created(uri).body(GymStudentResponse.ModelMapper.from(gymStudent))
     }
 
     @GetMapping("/gym-student/{id}")
