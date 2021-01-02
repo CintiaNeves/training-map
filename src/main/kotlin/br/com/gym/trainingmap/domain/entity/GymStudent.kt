@@ -43,8 +43,7 @@ data class GymStudent(
         @OneToOne
         @JoinColumn(name = "IDT_USER")
         val user : User
-) {
-
+){
     override fun toString(): String {
         return super.toString()
     }

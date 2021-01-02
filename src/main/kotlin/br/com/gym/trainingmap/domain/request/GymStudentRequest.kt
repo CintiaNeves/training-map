@@ -12,7 +12,7 @@ class GymStudentRequest(
         @Email
         val email: String,
 
-        val birthDate: LocalDate){
+        val birthDate: LocalDate) : AbstractRequest(){
 
 }
 
