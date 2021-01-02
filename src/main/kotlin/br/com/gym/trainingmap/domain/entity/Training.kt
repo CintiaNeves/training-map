@@ -43,7 +43,6 @@ data class Training(
         val teacher: Teacher
 
 ){
-
     override fun toString(): String {
         return super.toString()
     }
