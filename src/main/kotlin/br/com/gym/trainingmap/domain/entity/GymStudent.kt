@@ -1,5 +1,6 @@
 package br.com.gym.trainingmap.domain.entity
 
+import br.com.gym.trainingmap.domain.AbstractEntity
 import br.com.gym.trainingmap.domain.response.GymStudentResponse
 import com.fasterxml.jackson.annotation.JsonFormat
 import org.hibernate.annotations.CreationTimestamp
@@ -15,9 +16,6 @@ data class GymStudent(
         @Column(name = "IDT_GYM_STUDENT")
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long = 0,
-
-        @Column(name = "NUM_REGISTRATION_GYM_STUDENT", nullable = false)
-        val registration: Long,
 
         @Column(name = "NAM_GYM_STUDENT", nullable = false)
         var name: String,
@@ -43,8 +41,8 @@ data class GymStudent(
         @OneToOne
         @JoinColumn(name = "IDT_USER")
         val user : User
-){
-    override fun toString(): String {
+): AbstractEntity(){
+        override fun toString(): String {
         return super.toString()
     }
 

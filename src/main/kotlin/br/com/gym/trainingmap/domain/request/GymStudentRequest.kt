@@ -1,5 +1,6 @@
 package br.com.gym.trainingmap.domain.request
 
+import br.com.gym.trainingmap.domain.AbstractEntity
 import java.time.LocalDate
 import javax.validation.constraints.Email
 import javax.validation.constraints.Size
@@ -12,7 +13,7 @@ class GymStudentRequest(
         @Email
         val email: String,
 
-        val birthDate: LocalDate) : AbstractRequest(){
+        val birthDate: LocalDate) : AbstractEntity(){
 
 }
 

@@ -12,8 +12,8 @@ class UserService {
     @Autowired
     lateinit var repository: UserRepository
 
-    fun create(email: String, password: String, changeAgent: String): User {
-        return repository.save(User(userName = email, password = password, changeAgent = changeAgent, userType = UserType.TEACHER))
+    fun create(email: String, password: String, changeAgent: String, userType: UserType): User {
+        return repository.save(User(userName = email, password = password, changeAgent = changeAgent, userType = userType))
     }
 
 }
