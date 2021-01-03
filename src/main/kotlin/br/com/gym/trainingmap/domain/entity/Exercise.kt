@@ -28,7 +28,10 @@ data class Exercise(
         var dateUpdate: LocalDateTime = LocalDateTime.now(),
 
         @Column(name = "DES_CHANGE_AGENT", nullable = false)
-        var changeAgent : String
+        var changeAgent : String,
+
+        @Enumerated(EnumType.STRING)
+        val exerciseMember: ExerciseMember
 ){
     override fun toString(): String {
         return super.toString()
