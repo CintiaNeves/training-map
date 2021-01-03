@@ -30,7 +30,7 @@ class GymStudentResource {
         return GymStudentResponse.ModelMapper.from(service.findById(id).get())
     }
 
-    @GetMapping("/students")
+    @GetMapping("/gym-students")
     fun findAll(): List<GymStudentResponse> {
         return  service.findAll()
                 .asSequence()
