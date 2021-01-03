@@ -14,7 +14,7 @@ data class User(
         val id: Long = 0,
 
         @Column(name = "DES_USER_NAME", nullable = false)
-        val userName: String,
+        var userName: String,
 
         @Column(name = "DES_PASSWORD", nullable = false)
         var password: String,
@@ -31,7 +31,10 @@ data class User(
         var dateUpdate: LocalDateTime = LocalDateTime.now(),
 
         @Column(name = "DES_CHANGE_AGENT", nullable = false)
-        var changeAgent : String
+        var changeAgent : String,
+
+        @Enumerated(EnumType.STRING)
+        val userType : UserType
 ){
     override fun toString(): String {
         return super.toString()
