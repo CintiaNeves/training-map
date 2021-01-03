@@ -43,7 +43,4 @@ data class GymStudent(
         val user : User
 ): AbstractEntity(){
         override fun toString(): String {
-        return super.toString()
-    }
-
 }

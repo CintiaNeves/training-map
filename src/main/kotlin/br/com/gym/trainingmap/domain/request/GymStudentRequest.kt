@@ -11,9 +11,8 @@ class GymStudentRequest(
 
         @Email
         val email: String,
-
+  
         val birthDate: LocalDate,
 ) : AbstractEntity() {
-
 }
 
