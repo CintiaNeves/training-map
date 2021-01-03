@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
 @Component
-class RegistrationGymStudentValidation(): IStrategy {
+class ExistenceValidation(): IStrategy {
     @Autowired
     lateinit var repository: GymStudentRepository
 

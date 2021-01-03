@@ -13,9 +13,8 @@ data class Teacher(
         @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long = 0,
 
-
         @Column(name = "NAM_TEACHER", nullable = false)
-        val name: String,
+        var name: String,
 
         @Column(name = "DES_EMAIL", nullable = false)
         var email: String,

@@ -14,7 +14,7 @@ data class User(
         val id: Long = 0,
 
         @Column(name = "DES_USER_NAME", nullable = false)
-        val userName: String,
+        var userName: String,
 
         @Column(name = "DES_PASSWORD", nullable = false)
         var password: String,
