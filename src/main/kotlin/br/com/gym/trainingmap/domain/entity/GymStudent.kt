@@ -1,7 +1,6 @@
 package br.com.gym.trainingmap.domain.entity
 
 import br.com.gym.trainingmap.domain.AbstractEntity
-import br.com.gym.trainingmap.domain.response.GymStudentResponse
 import com.fasterxml.jackson.annotation.JsonFormat
 import org.hibernate.annotations.CreationTimestamp
 import org.hibernate.annotations.UpdateTimestamp
@@ -43,4 +42,6 @@ data class GymStudent(
         val user : User
 ): AbstractEntity(){
         override fun toString(): String {
+                return super.toString()
+        }
 }
