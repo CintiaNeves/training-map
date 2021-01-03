@@ -19,9 +19,7 @@ class ExerciseService {
         return repository.save(Exercise(name = "Elevação lateral", changeAgent =
             String.format("PEDROSO - TEST - %s", LocalDate.now()), exerciseMember = ExerciseMember.SHOULDERS))
     }
-
     fun findAll(): Iterable<Exercise> {
         return repository.findAll()
     }
-
 }
