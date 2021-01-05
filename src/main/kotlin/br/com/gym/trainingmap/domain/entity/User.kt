@@ -36,7 +36,5 @@ data class User(
         @Enumerated(EnumType.STRING)
         val userType : UserType
 ){
-    override fun toString(): String {
-        return super.toString()
-    }
+
 }

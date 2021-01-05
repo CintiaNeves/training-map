@@ -38,7 +38,5 @@ data class TrainingItem(
         @JoinColumn(name = "IDT_TRAINING")
         val training: Training
 ){
-    override fun toString(): String {
-        return super.toString()
-    }
+
 }

@@ -33,7 +33,5 @@ data class Exercise(
         @Enumerated(EnumType.STRING)
         val exerciseMember: ExerciseMember
 ){
-    override fun toString(): String {
-        return super.toString()
-    }
+
 }

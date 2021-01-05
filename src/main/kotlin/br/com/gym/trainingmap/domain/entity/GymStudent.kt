@@ -41,7 +41,5 @@ data class GymStudent(
         @JoinColumn(name = "IDT_USER")
         val user : User
 ): AbstractEntity(){
-        override fun toString(): String {
-                return super.toString()
-        }
+
 }
