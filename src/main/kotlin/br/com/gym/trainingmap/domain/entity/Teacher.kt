@@ -34,7 +34,5 @@ data class Teacher(
         @JoinColumn(name = "IDT_USER")
         val user : User
 ){
-    override fun toString(): String {
-        return super.toString()
-    }
+
 }
