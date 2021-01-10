@@ -1,14 +1,14 @@
 package br.com.gym.trainingmap.factory
 
-import br.com.gym.trainingmap.domain.request.GymStudentRequest
+import br.com.gym.trainingmap.domain.request.ClientRequest
 import org.springframework.stereotype.Component
 import java.time.LocalDate
 
 @Component
-class GymStudentFactory {
+class ClientFactory {
 
-    fun getDefault(): GymStudentRequest {
-       return GymStudentRequest("Maria Juana",
+    fun getDefault(): ClientRequest {
+       return ClientRequest("Maria Juana",
                "email@email.com",
                LocalDate.now())
     }

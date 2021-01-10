@@ -36,7 +36,7 @@ data class Training(
 
         @ManyToOne()
         @JoinColumn(name = "IDT_GYM_STUDENT")
-        val gymStudent: GymStudent,
+        val client: Client,
 
         @OneToOne()
         @JoinColumn(name = "IDT_TEACHER")

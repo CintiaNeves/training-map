@@ -5,7 +5,7 @@ import java.time.LocalDate
 import javax.validation.constraints.Email
 import javax.validation.constraints.Size
 
-class GymStudentRequest(
+class ClientRequest(
         @Size(min = 5, max = 50)
         val name: String,
 
