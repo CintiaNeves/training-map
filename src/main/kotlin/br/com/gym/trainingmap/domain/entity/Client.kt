@@ -10,7 +10,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "GYM_STUDENT")
-data class GymStudent(
+data class Client(
         @Id
         @Column(name = "IDT_GYM_STUDENT")
         @GeneratedValue(strategy = GenerationType.IDENTITY)

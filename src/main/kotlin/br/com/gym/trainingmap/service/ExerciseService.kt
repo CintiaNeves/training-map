@@ -2,7 +2,6 @@ package br.com.gym.trainingmap.service
 
 import br.com.gym.trainingmap.domain.entity.Exercise
 import br.com.gym.trainingmap.domain.entity.ExerciseMember
-import br.com.gym.trainingmap.domain.entity.GymStudent
 import br.com.gym.trainingmap.domain.request.ExerciseRequest
 import br.com.gym.trainingmap.repository.ExerciseRepository
 import org.springframework.beans.factory.annotation.Autowired

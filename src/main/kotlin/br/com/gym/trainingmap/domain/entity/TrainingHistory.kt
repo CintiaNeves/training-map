@@ -26,7 +26,7 @@ data class TrainingHistory(
 
         @ManyToOne()
         @JoinColumn(name = "IDT_GYM_STUDENT")
-        val gymStudent: GymStudent,
+        val client: Client,
 
         @ManyToOne()
         @JoinColumn(name = "IDT_TRAINING")

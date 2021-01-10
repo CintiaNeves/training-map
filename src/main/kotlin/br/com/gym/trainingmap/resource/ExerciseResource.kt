@@ -1,9 +1,7 @@
 package br.com.gym.trainingmap.resource
 
-import br.com.gym.trainingmap.domain.entity.Exercise
 import br.com.gym.trainingmap.domain.request.ExerciseRequest
 import br.com.gym.trainingmap.domain.response.ExerciseResponse
-import br.com.gym.trainingmap.domain.response.GymStudentResponse
 import br.com.gym.trainingmap.service.ExerciseService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity

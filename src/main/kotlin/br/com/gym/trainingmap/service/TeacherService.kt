@@ -4,7 +4,7 @@ import br.com.gym.trainingmap.domain.entity.Teacher
 import br.com.gym.trainingmap.domain.entity.UserType.TEACHER
 import br.com.gym.trainingmap.domain.request.TeacherRequest
 import br.com.gym.trainingmap.repository.TeacherRepository
-import br.com.gym.trainingmap.strategy.gymStudent.ExistenceValidation
+import br.com.gym.trainingmap.strategy.client.ExistenceValidation
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 import java.time.LocalDate
