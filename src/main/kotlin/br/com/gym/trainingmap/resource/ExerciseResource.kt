@@ -26,7 +26,7 @@ class ExerciseResource {
     }
 
     @GetMapping("/exercises")
-    fun findAll(): List<ExerciseResponse> {
+    fun findAll(): List<ExerciseResponse?> {
         return  service.findAll()
                 .asSequence()
                 .map { exercise -> ExerciseResponse.ModelMapper.from(exercise) }
