@@ -1,10 +1,9 @@
 package br.com.gym.trainingmap.service
 
 import br.com.gym.trainingmap.domain.entity.Client
-import br.com.gym.trainingmap.domain.entity.UserType.STUDENT
+import br.com.gym.trainingmap.domain.entity.UserType.CLIENT
 import br.com.gym.trainingmap.domain.request.ClientRequest
 import br.com.gym.trainingmap.repository.ClientRepository
-import br.com.gym.trainingmap.strategy.client.ExistenceValidation
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 import java.time.LocalDate
@@ -19,14 +18,10 @@ class ClientService {
     @Autowired
     lateinit var userService: UserService
 
-    @Autowired
-    lateinit var stExistenceValidation: ExistenceValidation
-
     fun create(request: ClientRequest): Client {
-        stExistenceValidation.process(request)
-        val user = userService.create(request.email, request.email, String.format("PEDROSO - TEST - %s", LocalDate.now()), STUDENT)
+        val user = userService.create(request.email, request.email, request.changeAgent, CLIENT)
         return repository.save(Client(name = request.name, email = request.email, birthDate = request.birthDate,
-                changeAgent = String.format("PEDROSO - TEST - %s", LocalDate.now()), user = user))
+                changeAgent = request.changeAgent, user = user))
     }
 
     fun findById(id: Long): Optional<Client> {

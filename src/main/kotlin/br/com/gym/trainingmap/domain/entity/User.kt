@@ -35,6 +35,4 @@ data class User(
 
         @Enumerated(EnumType.STRING)
         val userType : UserType
-){
-
-}
+)

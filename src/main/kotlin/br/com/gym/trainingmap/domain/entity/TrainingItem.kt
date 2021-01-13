@@ -37,6 +37,4 @@ data class TrainingItem(
         @ManyToOne
         @JoinColumn(name = "IDT_TRAINING")
         val training: Training
-){
-
-}
+)

@@ -19,6 +19,7 @@ class ExerciseResource {
     @PostMapping
     fun create(@Valid @RequestBody request: ExerciseRequest): ResponseEntity<ExerciseResponse> {
         val exercise = service.create(request)
+        
         val uri = ServletUriComponentsBuilder.fromCurrentRequestUri()
                 .path("/{id}")
                 .buildAndExpand(exercise.id).toUri()

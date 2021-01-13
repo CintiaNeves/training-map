@@ -33,6 +33,4 @@ data class Teacher(
         @OneToOne
         @JoinColumn(name = "IDT_USER")
         val user : User
-){
-
-}
+)

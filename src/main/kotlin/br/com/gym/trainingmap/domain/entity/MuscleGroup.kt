@@ -4,7 +4,7 @@ enum class MuscleGroup(val muscleGroup : String) {
 
     CHEST("PEITO"),
     CARDIO("CARDIO"),
-    GLUTES("GLÚTEO"),
+    GLUTES("GLÚTEOS"),
     BICEPS("BÍCEPS"),
     ABDOMEN("ABDÔMEN"),
     TRAPS("TRAPÉZIOS"),

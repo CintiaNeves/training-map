@@ -1,6 +1,5 @@
 package br.com.gym.trainingmap.domain.entity
 
-import br.com.gym.trainingmap.domain.AbstractEntity
 import com.fasterxml.jackson.annotation.JsonFormat
 import org.hibernate.annotations.CreationTimestamp
 import org.hibernate.annotations.UpdateTimestamp
@@ -9,14 +8,14 @@ import java.time.LocalDateTime
 import javax.persistence.*
 
 @Entity
-@Table(name = "GYM_STUDENT")
+@Table(name = "CLIENT")
 data class Client(
         @Id
-        @Column(name = "IDT_GYM_STUDENT")
+        @Column(name = "IDT_CLIENT")
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long = 0,
 
-        @Column(name = "NAM_GYM_STUDENT", nullable = false)
+        @Column(name = "NAM_CLIENT", nullable = false)
         var name: String,
 
         @Column(name = "DES_EMAIL", nullable = false)
@@ -40,6 +39,4 @@ data class Client(
         @OneToOne
         @JoinColumn(name = "IDT_USER")
         val user : User
-): AbstractEntity(){
-
-}
+)

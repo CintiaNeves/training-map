@@ -32,6 +32,4 @@ data class Exercise(
 
         @Enumerated(EnumType.STRING)
         val muscleGroup: MuscleGroup?
-){
-
-}
+)

@@ -25,12 +25,10 @@ data class TrainingHistory(
         var changeAgent : String,
 
         @ManyToOne()
-        @JoinColumn(name = "IDT_GYM_STUDENT")
+        @JoinColumn(name = "IDT_CLIENT")
         val client: Client,
 
         @ManyToOne()
         @JoinColumn(name = "IDT_TRAINING")
         val training: Training,
-){
-
-}
+)

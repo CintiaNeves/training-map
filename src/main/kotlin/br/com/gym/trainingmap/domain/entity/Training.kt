@@ -14,9 +14,6 @@ data class Training(
         @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long = 0,
 
-        @Column(name = "DES_TRAINING_SEQUENCE", nullable = false)
-        val trainingSequence: String,
-
         @Column(name = "DAT_EXPIRATION")
         var expirationDate: LocalDate,
 
@@ -35,13 +32,13 @@ data class Training(
         var changeAgent : String,
 
         @ManyToOne()
-        @JoinColumn(name = "IDT_GYM_STUDENT")
+        @JoinColumn(name = "IDT_CLIENT")
         val client: Client,
 
         @OneToOne()
         @JoinColumn(name = "IDT_TEACHER")
-        val teacher: Teacher
+        val teacher: Teacher,
 
-){
-
-}
+        @Enumerated(EnumType.STRING)
+        val trainingSequence : TrainingSequence
+)
